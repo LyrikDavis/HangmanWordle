@@ -1,0 +1,59 @@
+#Hangman Wordle
+#The first section asks Player 1 to pick a 5 letter word
+print("Player 1, enter a 5 letter word, hitting enter after each letter.")
+l1 = input("Letter 1:")
+l2 = input("Letter 2:")
+l3 = input("Letter 3:")
+l4 = input("Letter 4:")
+l5 = input("Letter 5:")
+print("Excellent, the word you have chosen is", l1, l2, l3, l4, l5)
+print("Please Scroll Down To Begin Game")
+#This sections scrolls down so that Player 2 cannot see the word player 1 chose
+print("")
+print("")
+print("")
+print("")
+print("")
+print("")
+print("")
+print("")
+#This While loop says that as long as the word isn't guessed correctly the game will continue
+#Player two guesses a 5 letter word
+win = False
+while win == False:
+    print("Player 2, please enter your 5 letter word hitting enter after each letter")
+    g1 = input("Letter 1:")
+    g2 = input("Letter 2:")
+    g3 = input("Letter 3:")
+    g4 = input("Letter 4:")
+    g5 = input("Letter 5")
+#Player 2s guesses are compared to player 1s word
+    if g1 == l1:
+        print("The first letter is", l1)
+    else:
+        print("The first letter is incorrect")
+    if g2 == l2:
+        print("The second letter is", l2)
+    else:
+        print("The second letter is incorrect")
+    if g3 == l3:
+        print("The third letter is", l3)
+    else:
+        print("The third letter is incorrect")
+    if g4 == l4:
+        print("The fourth letter is", l4)
+    else:
+        print("The fourth letter is incorrect")
+    if g5 == l5:
+        print("The final letter is", l5)
+    else:
+        print("The final letter is incorrect")
+#If all 5 letters match, "win" is set to true and the game ends
+#if not, player 2 guesses again
+    if g1 == l1 and g2 == l2 and g3 == l3 and g4 == l4 and g5 == l5:
+        print("CONGRATULATIONS you guessed correctly!")
+        input("Press enter to exit")
+        win = True
+    else:
+        print("Sorry that was incorrect, try again!")
+        input("press enter to continue")
